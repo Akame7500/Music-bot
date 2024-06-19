@@ -20,7 +20,7 @@ player.extractors.loadDefault();
 console.clear()
 require('./loader');
 
-client.login(client.config.app.token)
+client.login(process.env.token)
 .catch(async (e) => {
     if(e.message === 'An invalid token was provided.'){
     require('./process_tools')
